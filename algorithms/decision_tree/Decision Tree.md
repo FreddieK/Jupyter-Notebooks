@@ -10,9 +10,9 @@ What I had a hard time understanding was rather how a decision tree could be use
 Thus began some digging and experimenting.
 
 ## Pseudo algorithm
-1. Starting with the complete dataset, identify the feature and threshold that has the highest prediction power and split the tree based on that
-2. Recursively keep growing the tree greedily until stopping criterias are met (depth, lack of improvement, threshold on min number of examples in the leaf etc.)
-3. Prune tree, and other optimisations
+1. Starting with the complete dataset, identify the feature and threshold that has the highest prediction power and split the tree based on that.
+2. Recursively keep growing the tree greedily until stopping criterias are met (depth, lack of improvement, threshold on min number of examples in the leaf etc.).
+3. Prune tree, and other optimisations.
 
 ## Classification
 When reading online, you find tons of examples of building a classification tree, either using [Gini impurity](https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity) or Information Gain. Based in information theory, the idea is to reduce the entropy (amount of information needed to describe the data) as much as possible with each split.
@@ -43,7 +43,7 @@ Dynamically create factor variables $A_c$ that is true if $A < c$.
 1. Identify adjacent examples of $A$ with differing target values (if the target is the same, the break point won't make any sense).
 2. Generate $c$ suggestion as the mean between the adjacent rows.
 3. Repeat for all examples until you have a list of candidate breakpoints.
-4. Identify which candidate suggestion that maximises information gain (and compare that to other attributes)
+4. Identify which candidate suggestion that maximises information gain (and compare that to other attributes).
 
 ## Regression
 Since the Gradient Boosting algorithm uses additive forward expansion to build an ensemble model out of multiple trees, each tree will need to output values that can be summed up.
